@@ -10,13 +10,18 @@ config_version=5
 
 [application]
 
-config/name="Godot Game"
+config/name="The Lost Pawn"
 run/main_scene="res://Scenes/Main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.156863, 0.141176, 0.141176, 1)
 boot_splash/image="res://Random/cooltext459651885687269.png"
 boot_splash/fullsize=false
 config/icon="res://Random/main menu.png"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 
 [input]
 
