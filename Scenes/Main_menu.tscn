@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://demqdy1jmdywr"]
+
+[ext_resource type="Script" path="res://Scenes/Main_menu.gd" id="1_mya4r"]
+[ext_resource type="Texture2D" uid="uid://dbapfgcrtlc3p" path="res://Random/main menu.png" id="2_0eqs1"]
+[ext_resource type="Texture2D" uid="uid://cnp62v3fgc4rm" path="res://Random/cooltext458663616548381.png" id="2_60qra"]
+[ext_resource type="FontFile" uid="uid://cv6vit7xjl18d" path="res://makisupa/MAKISUPA.TTF" id="3_8jiov"]
+
+[sub_resource type="FontVariation" id="FontVariation_4e52d"]
+base_font = ExtResource("3_8jiov")
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_mya4r")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(579, 580)
+scale = Vector2(1.12891, 1.12891)
+texture = ExtResource("2_0eqs1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.0
+offset_top = 70.0
+offset_right = 316.0
+offset_bottom = 171.0
+grow_horizontal = 2
+texture = ExtResource("2_60qra")
+
+[node name="Level 1" type="Button" parent="."]
+offset_left = 486.0
+offset_top = 186.0
+offset_right = 665.0
+offset_bottom = 272.0
+theme_override_fonts/font = SubResource("FontVariation_4e52d")
+theme_override_font_sizes/font_size = 38
+text = "DEMO"
+
+[connection signal="pressed" from="Level 1" to="." method="_on_level_1_pressed"]
