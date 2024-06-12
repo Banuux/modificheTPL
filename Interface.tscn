@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://chi8iqticvkks"]
+
+[ext_resource type="Texture2D" uid="uid://debikm0uml3q7" path="res://Random/guiBG.png" id="1_wwlgy"]
+[ext_resource type="Texture2D" uid="uid://dwb4cx8toq3n1" path="res://Coin/01.png" id="2_c2qfl"]
+[ext_resource type="FontFile" uid="uid://cv6vit7xjl18d" path="res://makisupa/MAKISUPA.TTF" id="3_1oe3l"]
+
+[node name="Node" type="Node"]
+metadata/_edit_horizontal_guides_ = [21.0]
+
+[node name="coin counter" type="NinePatchRect" parent="."]
+texture_filter = 1
+offset_right = 82.0
+offset_bottom = 42.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_wwlgy")
+region_rect = Rect2(17, 7, 29, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="coin counter"]
+texture_filter = 1
+position = Vector2(57, 21)
+scale = Vector2(2, 2)
+texture = ExtResource("2_c2qfl")
+
+[node name="coinsLabel" type="Label" parent="coin counter"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -16.0
+offset_right = -4.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oe3l")
+theme_override_font_sizes/font_size = 25
+text = "0"
