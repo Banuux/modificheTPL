@@ -6,12 +6,12 @@ extends Node2D
 var door_opened = false
 var maxCoins = 5
 
-func _on_body_entered():
+func _on_body_entered(CharacterBody2D):
 	if door_opened == false: 
 		animated_sprite_2d.play("default")
 		door_opened = true
 		
-func _on_body_exited():
+func _on_body_exited(CharacterBody2D):
 	if door_opened == true: 
 		animated_sprite_2d.play("close")
 		door_opened = false
